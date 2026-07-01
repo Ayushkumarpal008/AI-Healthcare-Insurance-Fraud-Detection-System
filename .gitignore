@@ -1,0 +1,49 @@
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environments
+.venv/
+venv/
+env/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Streamlit Cache
+.streamlit/cache/
+
+# CatBoost Logs
+catboost_info/
+
+# Raw Dataset
+data/raw/
+
+# Large Processed Datasets
+data/processed/train_engineered_claims.csv
+data/processed/train_merged_claims.csv
+data/processed/prediction_history.csv
+
+# Trained Models
+models/*.joblib
+models/*.pkl
+models/*.pickle
+
+# Python Cache
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# VS Code
+.vscode/settings.json
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log

@@ -1,0 +1,10 @@
+{
+  "rows": 558211,
+  "columns": 90,
+  "duplicate_rows": 0,
+  "missing_cells": 11061851,
+  "class_distribution": {
+    "No": 345415,
+    "Yes": 212796
+  }
+}

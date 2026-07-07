@@ -27,7 +27,10 @@ data/processed/train_merged_claims.csv
 data/processed/prediction_history.csv
 
 # Trained Models
-models/*.joblib
+# Small deployment model is allowed
+!models/fraud_detection_model.joblib
+models/*.pkl
+models/*.pickle
 models/*.pkl
 models/*.pickle
 

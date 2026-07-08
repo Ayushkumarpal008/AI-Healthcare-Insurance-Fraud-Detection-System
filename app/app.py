@@ -638,17 +638,19 @@ def batch_prediction(predictor: FraudPredictor) -> None:
         st.info("Check that your uploaded CSV has valid claim columns and no unsupported values.")
         return
 
-    history_path = PROCESSED_DATA_DIR / "prediction_history.csv"
+    # Prediction history saving disabled for cloud deployment
+    # This prevents memory crash on Render while still allowing full CSV prediction.
+    #history_path = PROCESSED_DATA_DIR / "prediction_history.csv"
 
-    if history_path.exists():
-        history = pd.concat(
-            [pd.read_csv(history_path), predictions],
-            ignore_index=True,
-        )
-    else:
-        history = predictions
+    #if history_path.exists():
+    #    history = pd.concat(
+    #        [pd.read_csv(history_path), predictions],
+    #        ignore_index=True,
+    #    )
+    #else:
+    #    history = predictions
 
-    history.to_csv(history_path, index=False)
+    #history.to_csv(history_path, index=False)
 
     st.success("Batch analysis completed successfully.")
 
@@ -720,7 +722,7 @@ def show_history() -> None:
     """Show saved prediction history."""
     st.subheader("Prediction History")
     st.caption("Review previous batch prediction results.")
-
+    st.caption("The history not available due  to deployement issues ")
     history_path = PROCESSED_DATA_DIR / "prediction_history.csv"
 
     if not history_path.exists():
